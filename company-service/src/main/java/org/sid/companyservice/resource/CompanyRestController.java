@@ -12,21 +12,21 @@ import java.util.Map;
 @RestController
 public class CompanyRestController {
 
-//    @Value("${xParam}")
-//    private int xParam;
-//    @Value("${yParam}")
-//    private int yParam;
-////    @Value("${me}")
-////    private String me;
-//
-//    @GetMapping("/myConfig")
-//    public Map<String, Object> myConfig() {
-//        Map<String, Object> params = new HashMap<>();
-////        params.put("xParam", xParam);
-//        params.put("yParam", yParam);
-////        params.put("me", me);
-//        params.put("threadName", Thread.currentThread().getName());
-//        return  params;
-//    }
+    @Value("${xParam}")
+    private int xParam;
+    @Value("${yParam}")
+    private int yParam;
+//    @Value("${me}")
+//    private String me;
+
+    @GetMapping("/myConfig")
+    public Map<String, Object> myConfig() {
+        Map<String, Object> params = new HashMap<>();
+//        params.put("xParam", xParam);
+        params.put("yParam", yParam);
+//        params.put("me", me);
+        params.put("threadName", Thread.currentThread().getName());
+        return  params;
+    }
 
 }
